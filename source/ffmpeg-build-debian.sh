@@ -352,7 +352,7 @@ function build_fdkaac {
     if [[ "$CONFIGURE_FFMPEG_CODEC_FLAGS" =~ "--enable-libfdk_aac" ]]
     then
         cd $BUILD_DIR
-        wget -c http://ffmpeg-builder.googlecode.com/files/fdk-aac-0.1.1.tar.gz
+        wget -c http://ffmpeg-builder.googlecode.com/files/fdk-aac-0.1.2.tar.gz
         tar -xzvf fdk-aac*
         cd fdk-aac*
         ./configure $CONFIGURE_ALL_FLAGS
@@ -459,7 +459,7 @@ function build_x264 {
     if [[ "$CONFIGURE_FFMPEG_CODEC_FLAGS" =~ "--enable-libx264" ]]
     then
         cd $BUILD_DIR
-        wget -c http://ffmpeg-builder.googlecode.com/files/x264-0.133.tar.bz2
+        wget -c http://ffmpeg-builder.googlecode.com/files/x264-0.136.tar.bz2
         tar -xjvf x264*.tar.*
         cd x264-snapshot*
         # NOTE: x264 threads must be same regarding to ffmpeg
@@ -494,7 +494,7 @@ function build_bluray {
 
 function build_ffmpeg {
     cd $BUILD_DIR
-    wget -c http://ffmpeg-builder.googlecode.com/files/ffmpeg-2.0.tar.bz2
+    wget -c http://ffmpeg-builder.googlecode.com/files/ffmpeg-2.0.1.tar.bz2
     tar -xjvf ffmpeg*.tar.*
     cd ffmpeg*
     ./configure $CONFIGURE_ALL_FLAGS $CONFIGURE_FFMPEG_CODEC_FLAGS $CONFIGURE_FFMPEG_FLAGS --extra-libs="$CONFIGURE_FFMPEG_LIBS"
