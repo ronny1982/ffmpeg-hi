@@ -30,7 +30,7 @@ PKG_DIR=$CWD/archive
 SRC_DIR=$CWD/src
 DIST_DIR=$CWD/build
 BIN_DIR=$DIST_DIR/usr/bin
-CONFIGURE_ALL_FLAGS="--enable-static --disable-shared"
+CONFIGURE_ALL_FLAGS="--build=$(gcc -dumpmachine) --enable-static --disable-shared"
 CONFIGURE_FFMPEG_LIBS=""
 CONFIGURE_FFMPEG_FLAGS="\
 --enable-runtime-cpudetect \
